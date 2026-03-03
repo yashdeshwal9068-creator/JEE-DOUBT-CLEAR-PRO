@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherCalc | JEE Advanced Reactor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com"></script>
+</head>
+<body>
+    <div class="stars"></div>
+    <header>
+        <div class="logo">AETHER REACTOR <span class="version">v2.5</span></div>
+        <div class="search-container">
+            <input type="text" id="formulaSearch" placeholder="Search JEE Advanced Syllabus..." onkeyup="filterFormulas()">
+        </div>
+    </header>
+
+    <div class="reactor-grid">
+        <section class="subject-card math" id="math-section">
+            <div class="subject-header">MATHEMATICS</div>
+            <div class="formula-scroll" id="math-list"></div>
+        </section>
+
+        <section class="subject-card physics" id="phys-section">
+            <div class="subject-header">PHYSICS</div>
+            <div class="formula-scroll" id="phys-list"></div>
+        </section>
+
+        <section class="subject-card chemistry" id="chem-section">
+            <div class="subject-header">CHEMISTRY</div>
+            <div class="formula-scroll" id="chem-list"></div>
+        </section>
+    </div>
+
+    <!-- REACTOR MODAL -->
+    <div id="reactor-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeReactor()">&times;</span>
+            <h2 id="reactor-title">Readying Node...</h2>
+            <div class="formula-visual" id="formula-display"></div>
+            <div class="input-grid" id="reactor-inputs"></div>
+            <div class="action-bar">
+                <button class="ignite-btn" onclick="igniteCalculation()">EXECUTE CALCULATION</button>
+            </div>
+            <div id="reactor-output" class="result-glow"></div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="ui.js"></script>
+    <script src="engine.js"></script>
+</body>
+  </html>
+  
