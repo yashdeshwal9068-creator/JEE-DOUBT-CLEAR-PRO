@@ -1,0 +1,19 @@
+:root {
+    --math: #00f3ff; --phys: #ff0055; --chem: #00ff9d; --bg: #030816;
+}
+body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; margin: 0; overflow: hidden; }
+header { padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.reactor-grid { display: grid; grid-template-columns: repeat(3, 1fr); height: 85vh; gap: 20px; padding: 20px; }
+.subject-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(10px); display: flex; flex-direction: column; }
+.subject-header { padding: 15px; font-weight: bold; letter-spacing: 2px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.formula-scroll { overflow-y: auto; padding: 15px; flex-grow: 1; }
+.formula-btn { width: 100%; padding: 15px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid transparent; color: #fff; border-radius: 12px; cursor: pointer; text-align: left; transition: 0.3s; }
+.math .formula-btn:hover { border-color: var(--math); box-shadow: 0 0 15px var(--math); }
+.physics .formula-btn:hover { border-color: var(--phys); box-shadow: 0 0 15px var(--phys); }
+.chemistry .formula-btn:hover { border-color: var(--chem); box-shadow: 0 0 15px var(--chem); }
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100; }
+.modal-content { width: 500px; margin: 8% auto; padding: 30px; border-radius: 30px; border: 1px solid #444; }
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+input { background: #111; border: 1px solid #333; color: #00ff9d; padding: 10px; border-radius: 8px; width: 80%; }
+.ignite-btn { width: 100%; padding: 15px; background: var(--phys); color: #fff; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+  
